@@ -1,20 +1,36 @@
 import React from 'react';
 import reactLogo from '../assets/react.jpg'
+import './List2.css'
+
+
 
 function Header(){
     return(
         <header>
-                <img src={reactLogo} alt="reactLogo" width={300}/>
-            </header>
+            <img src={reactLogo} alt="reactLogo" width={300}/>
+            <nav >
+                <ul className='nav-list'>
+                    <li>Pricing</li>
+                    <li>About</li>
+                    <li>Contact</li>
+                </ul>
+            </nav>
+        </header>
     )
 }
 
-
-function List2(){
+function Footer(){
     return(
-        <>
-            <Header></Header>
-            <main>
+        <footer>
+                <p>&copy; 20xx Sutara Developermnt. All rights reserved</p>
+               
+        </footer>
+    )
+}
+
+function MainComponent(){
+    return (
+    <main>
             <h1>Reasons I'm excited to learn React</h1>
             <ol>
                 <li>React is popular library</li>
@@ -24,10 +40,17 @@ function List2(){
 
             </ol>
             </main>
-            <footer>
-                <p>&copy; 20xx Sutara Developermnt. All rights reserved</p>
-               
-            </footer>
+    )
+}
+
+
+function List2(){
+    return(
+        <>
+            <Header/>
+            <MainComponent/>
+            <Footer/>
+            
         </>
         
     );

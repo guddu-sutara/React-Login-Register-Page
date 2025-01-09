@@ -1,14 +1,16 @@
+import Joke from "./Joke";
+import jokesdata from "./jokesdata";
+
 function List() {
 
+  const jokelement = jokesdata.map(joke=>{
+    return <Joke setup= {joke.setup} punchline = {joke.punchline}/>
+  })
   return (
-    <ul>
-        <li>React is library of javascript</li>
-        <li>It is easy to use</li>
-        <li>easier for learn</li>
-        <li>it was developed in 2017</li>
-        <li>Angular is an framework</li>
-    </ul>
-
+    <>
+    {jokelement}
+    </>
+    
   )
 }
 
