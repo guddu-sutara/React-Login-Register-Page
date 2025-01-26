@@ -14,8 +14,6 @@ const SingleTodo = ({todo,todos,setTodos}:Props) => {
   const[edit,setEdit]= useState<boolean>();
   const[editTodo,setEditTodo]=useState<string>(todo.todo);
 
-
-
   const handleDone=(id:number)=>{
     setTodos(
       todos.map((todo)=>
